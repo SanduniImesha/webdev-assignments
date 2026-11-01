@@ -1,3 +1,0 @@
- # github - https://github.com/SanduniImesha/webdev-assignments.git
-# web link- https://sanduniimesha.github.io/webdev-assignments/html-css/
-#screenshot link - 
