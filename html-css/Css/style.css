@@ -75,30 +75,31 @@ header {
   height: auto;
 }
 
-nav ul {
-  display: flex;
-  gap: 8px;
-  height: 100%;
-  margin: 0;
-  padding: 0 24px;
-  list-style: none;
-  align-items: center;
+* {
+  box-sizing: border-box;
 }
 
-nav a {
-  display: block;
-  padding: 8px 20px;
-  color: var(--text);
-  text-decoration: none;
-  font-weight: 600;
+img {
+  max-width: 100%;
+  height: auto;
 }
 
-nav a:hover,
-nav a.active {
-  background: var(--navy);
-  color: #ffffff;
-}
+@media (max-width: 600px) {
+  header {
+    flex-direction: column;
+  }
 
+  nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+  }
+
+  nav li {
+    margin: 4px;
+  }
+}
 
 main {
   padding: 48px 32px 56px;
