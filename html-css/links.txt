@@ -1,5 +1,5 @@
 https://sanduniimesha.github.io/webdev-assignments/html-css
 
-http://127.0.0.1:5500/html-css/screenshots.html
+https://sanduniimesha.github.io/webdev-assignments/html-css/screenshots.html
 
 https://github.com/SanduniImesha/webdev-assignments.git
