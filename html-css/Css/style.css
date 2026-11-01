@@ -199,4 +199,40 @@ h1 {
   height: auto;
 }
 
-.contact-main { min-height: 480px; }
+.contact-main { min-height: 480px; }@media (max-width: 600px) {
+
+  /* stop anything from pushing the page wider than the screen */
+  html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* header: same look, just a bit more compact so all 3 links fit */
+  header {
+    flex-wrap: nowrap;
+  }
+
+  header img,
+  .logo img {
+    max-width: 70px;
+    height: auto;
+  }
+
+  nav {
+    flex: 1;
+    min-width: 0;
+    flex-wrap: wrap;
+    gap: 2px;
+    padding: 8px;
+  }
+
+  nav a {
+    padding: 10px 12px;
+    font-size: 0.95rem;
+  }
+}
