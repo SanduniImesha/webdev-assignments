@@ -201,7 +201,7 @@ h1 {
 
 .contact-main { min-height: 480px; }@media (max-width: 600px) {
 
-  /* stop anything from pushing the page wider than the screen */
+
   html, body {
     max-width: 100%;
     overflow-x: hidden;
@@ -212,7 +212,6 @@ h1 {
     height: auto;
   }
 
-  /* header: same look, just a bit more compact so all 3 links fit */
   header {
     flex-wrap: nowrap;
   }
