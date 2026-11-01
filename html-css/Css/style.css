@@ -34,6 +34,11 @@
 
 * { box-sizing: border-box; }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 body {
   margin: 0;
   padding: 40px 16px;
@@ -75,34 +80,34 @@ header {
   height: auto;
 }
 
-* {
-  box-sizing: border-box;
+nav {
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
-@media (max-width: 768px) {
-  header { flex-direction: column; }
-  nav a { display: block; padding: 10px; }
+nav a {
+  display: inline-block;
+  padding: 14px 20px;
+  color: var(--navy);
+  font-weight: 700;
+  text-decoration: none;
 }
 
-@media (max-width: 480px) {
-  body { font-size: 16px; }
-  footer { text-align: center; }
-}
-  nav ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 0;
-  }
-
-  nav li {
-    margin: 4px;
-  }
+nav a.active,
+nav a:hover {
+  background: var(--navy);
+  color: #ffffff;
 }
 
 main {
@@ -189,7 +194,6 @@ h1 {
   font-style: italic;
 }
 
-/* navy instead of mint: mint on a light background fails the WAVE contrast check */
 .contact-grid a { color: var(--navy); font-weight: 700; }
 
 .contact-grid img {
@@ -199,39 +203,41 @@ h1 {
   height: auto;
 }
 
-.contact-main { min-height: 480px; }@media (max-width: 600px) {
+.contact-main { min-height: 480px; }
 
 
+
+@media (max-width: 768px) {
+  .cards,
+  .contact-grid {
+    flex-direction: column;
+  }
+
+  .contact-grid address {
+    flex: none;
+  }
+}
+
+@media (max-width: 600px) {
   html, body {
     max-width: 100%;
     overflow-x: hidden;
   }
 
-  img {
-    max-width: 100%;
-    height: auto;
-  }
+  body { padding: 20px 8px; }
 
-  header {
-    flex-wrap: nowrap;
-  }
+  header { flex-direction: column; }
 
-  header img,
-  .logo img {
-    max-width: 70px;
-    height: auto;
-  }
+  .logo { width: 100%; }
 
-  nav {
-    flex: 1;
-    min-width: 0;
-    flex-wrap: wrap;
-    gap: 2px;
-    padding: 8px;
-  }
+  nav { padding: 8px 12px; }
 
   nav a {
-    padding: 10px 12px;
+    padding: 10px 14px;
     font-size: 0.95rem;
   }
+
+  main { padding: 32px 20px 40px; }
+
+  h1 { font-size: 2rem; }
 }
