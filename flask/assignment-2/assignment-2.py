@@ -5,7 +5,6 @@ from flask import Flask, Response
 
 app = Flask(__name__)
 
-# Find dictionary.json next to this file, so it works from any folder
 DICT_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "dictionary.json")
 
 
@@ -32,7 +31,6 @@ def translate(word):
     return json_response({"error": "Word not found"}, 404)
 
 
-# Optional: list all English words
 @app.route("/words")
 def words():
     return json_response(list(load_dictionary().keys()))

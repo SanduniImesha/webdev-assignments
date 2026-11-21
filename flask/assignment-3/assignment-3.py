@@ -40,9 +40,6 @@ def translate(word):
 @app.route("/words")
 def words():
     return json_response(list(load_dictionary().keys()))
-
-
-# GET /add?en=book&fi=kirja
 @app.route("/add")
 def add():
     en = request.args.get("en", "").strip().lower()
